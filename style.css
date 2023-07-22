@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #001c30;
+  --secondary-color: #9ac5f4;
+  --text-color: #fff4f4;
+  --disabled-color: #0a6ebd;
+}
+
+body {
+  font-family: "Figtree", sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 5rem 0;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  padding-bottom: 3rem;
+  color: var(--text-color);
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+header form input {
+  padding: 0.3rem 1rem;
+  width: 30rem;
+  border: 0.3rem solid var(--text-color);
+}
+
+header form input,
+header form button {
+  border-radius: 0.3rem;
+  outline: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+header form button {
+  padding: 0.5rem 1rem;
+  text-transform: capitalize;
+  width: fit-content;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  border: 0.1rem solid var(--text-color);
+}
+
+.container ul {
+  margin: 2rem 0rem;
+  gap: 1.3rem;
+  text-transform: capitalize;
+}
+
+
+.container ul li span:first-child {
+  background-color: var(--primary-color);
+  /* color: var(--secondary-color); */
+  border-top-right-radius: 0rem;
+  border-bottom-right-radius: 0rem;
+}
+
+.container ul.stats li span:last-child {
+  background-color: var(--secondary-color);
+  border-top-left-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+  /* border-le */
+}
+
+.container ul li span {
+  margin: 0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.todos li {
+  background-color: var(--text-color);
+  padding: 1.5rem 2rem;
+  margin: auto;
+  width: fit-content;
+  width: 30rem;
+  border-radius: 0.2rem;
+  justify-content: space-between;
+}
+
+.todos li:not(:first-child) {
+  margin-top: 1rem;
+}
+.todos li div span {
+  color: var(--primary-color);
+}
+
+.todos .complete {
+  text-decoration: line-through;
+  color: var(--disabled-color);
+  background-color: var(--secondary-color);
+}
+
+.todos li div {
+  gap: 0.75rem;
+}
+
+.todos .completed div span {
+  color: var(--disabled-color);
+  background-color: transparent;
+}
+
+.todos li input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 0.1rem solid var(--primary-color);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+.todos li input[type="checkbox"]::before {
+  content: "";
+  --un-icon: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 24 24' width='1.2em' height='1.2em' xmlns='http://www.w3.org/2000/svg' %3E%3Cpath fill='currentColor' d='m10.5 16.2l-4-4l1.4-1.4l2.6 2.6l5.6-5.6l1.4 1.4l-7 7Z'/%3E%3C/svg%3E");
+  -webkit-mask: var(--un-icon) no-repeat;
+  mask: var(--un-icon) no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  background-color: var(--primary-color);
+  color: inherit;
+  width: 1.2em;
+  height: 1.2em;
+  transform: scale(0);
+  transition: all 0.2s ease-in-out;
+}
+
+.todos li input[type="checkbox"]:checked {
+  background-color: var(--secondary-color);
+  transition: all 0.1s ease-in-out;
+}
+
+.todos li input[type="checkbox"]:checked::before {
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+}
+
+.todos li button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 1.3rem;
+  height: 1.3rem;
+  display: grid;
+  place-content: center;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* .todos li button:hover {
+  background-color: tomato;
+} */
+
+.todos li button svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+/* .todos li button:hover svg {
+  color: var(--text-color);
+} */
+
+.todos li button:hover svg path {
+  stroke: tomato;
+}
+
+.todos li button:active svg {
+  transform: scale(0.8);
+}
+
+.todos li span {
+  padding: 2px;
+  border: none;
+  outline: none;
+  border-radius: 0.2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.todos li span:focus {
+  background-color: var(--secondary-color);
+}
+
+.todos li span[contenteditable]:hover {
+  background-color: var(--secondary-color);
+}

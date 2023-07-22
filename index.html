@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>TODO Lists</title>
+</head>
+
+<body>
+    <header id="main-header" class="flex">
+        <div class="container">
+            <h1>Today</h1>
+
+            <form action="" id="todo-form">
+                <input type="text" name="task-name" placeholder="Add your task" autofocus>
+                <button type="submit">add task</button>
+            </form>
+        </div>
+    </header>
+
+    <section>
+        <div class="container" id="main-content">
+            <ul class="stats flex">
+                <li class="flex">
+                    <span>remaining</span>
+                    <span id="remaining-tasks">0</span>
+                </li>
+                <li class="flex">
+                    <span>completed</span>
+                    <span id="completed-tasks">0</span>
+                </li>
+                <li class="flex">
+                    <span>total</span>
+                    <span id="total-tasks">0</span>
+                </li>
+            </ul>
+
+            <ul class="todos"></ul>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
